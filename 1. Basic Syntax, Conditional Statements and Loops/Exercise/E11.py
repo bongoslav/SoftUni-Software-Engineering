@@ -9,8 +9,6 @@ while True:
     old_budget = budget
 
     budget -= (flour_price + eggs_price + milk_price)
-    # if loaves % 4 == 0:
-    #     budget -= milk_price
 
     if budget < 0:
         budget = old_budget
