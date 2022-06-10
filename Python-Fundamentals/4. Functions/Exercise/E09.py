@@ -7,17 +7,14 @@ def valid_password(password: str):
         is_valid = False
 
     # without RegEx:
-    for char in password:
-        if not 57 >= ord(char) >= 48 and not 90 >= ord(char) >= 65 and not 122 >= ord(char) >= 97:
-            is_valid = False
-            print("Password must consist only of letters and digits")
-            break
+    if password.isalnum():
+        print("Password must consist only of letters and digits")
 
-    nums_list = []
+    digit_counter = 0
     for char in password:
-        if 57 >= ord(char) >= 48:
-            nums_list.append(char)
-    if len(nums_list) < 2:
+        if char.isdigit():
+            digit_counter += 1
+    if digit_counter < 2:
         is_valid = False
         print("Password must have at least 2 digits")
 
