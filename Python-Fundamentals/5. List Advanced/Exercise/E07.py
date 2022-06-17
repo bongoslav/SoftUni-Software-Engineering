@@ -1,5 +1,3 @@
-import math
-
 numbers_list = list(map(int, input().split(", ")))
 max_value = max(numbers_list)
 
